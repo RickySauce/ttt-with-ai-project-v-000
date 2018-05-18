@@ -43,11 +43,20 @@ class Board
   end
 
   def taken?(input)
+
     if position(input) == "O" || position(input) == "X"
        true
      else
        false
      end
+
+    if position(input) == "" || position(input) == " " || position(input) == nil
+       false
+     else
+       true
+     end
+     #binding.pry
+
   end
 
   def valid_move?(input)
